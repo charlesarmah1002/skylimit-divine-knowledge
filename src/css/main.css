@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins, sans-serif;
+}
+
+:root {
+    --blue : #11345C;
+    --grey : #707070;
+}
+
+body {
+    background-color: white;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+header .primary-navigation {
+    width: min(100%, 1100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+header .primary-navigation .logo {
+    display: flex;
+    align-items: center;
+    height: 55px;
+}
+
+header .primary-navigation .logo img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+header .primary-navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+
+/* hero section */
+section#hero .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 15px 45px;
+}
+
+section#hero .container .col {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+section#hero .container .col h1 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 53px;
+    color: var(--blue);
+}
+
+section#hero .container .col p {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px;
+}
+
+section#hero .container .col a.btn {
+    text-decoration: none;
+    background: var(--blue);
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#hero .container .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#hero .container .image-container img {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* about section */
+section#about {
+    background: var(--blue);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    gap: 20px;
+    padding: 20px;
+}
+
+section#about .container h3 {
+    font-size: 35px;
+}
+
+section#about .container h3 span {
+    font-family: Archivo;
+}
+
+section#about .container p {
+    font-size: 20px;
+}
+
+
+/* services section */
