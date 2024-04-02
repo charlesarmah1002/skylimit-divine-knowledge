@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKYLIMIT DIVINE KNOWLEDGE</title>
+    <title>Skylimit Divine Knowledge</title>
+    <link rel="shortcut icon" href="src/images/logo-white.png" type="image/x-icon">
 
     <!-- css -->
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/fonts/remixicons/remixicon.css">
 </head>
+
 <body>
     <header>
-        <nav class="primary-navigation">
+        <nav class="primary-navigation" id="navigation">
             <a href="" class="logo">
                 <img src="src/images/logo.png" alt="">
             </a>
+            <div class="menu-toggle" onclick="menuActive()">
+                <span><i class="ri-menu-3-line"></i></span>
+            </div>
             <ul class="menu">
                 <li><a href="">Home</a></li>
                 <li><a href="">Registration</a></li>
@@ -29,7 +35,8 @@
             <div class="container">
                 <div class="col">
                     <h1>Connecting You To Education Worldwide</h1>
-                    <p>We provide guidance, support, and expertise to students, parents, educational institutions, and other stakeholders in the field of education</p>
+                    <p>We provide guidance, support, and expertise to students, parents, educational institutions, and
+                        other stakeholders in the field of education</p>
                     <a href="" class="btn">Get started</a>
                 </div>
                 <div class="image-container">
@@ -40,10 +47,13 @@
         <section id="about">
             <div class="container">
                 <h3>About <strong>SKYLIMIT DIVINE KNOWLEDGE</strong></h3>
-                <p>We're a educational consultancy based in Accra, Ghana dedicated to improving the educational landscape of our country. Our main objective is to empower students, parents and educational institutions to effectively navigate the educational system.</p>
+                <p>We're a educational consultancy based in Accra, Ghana dedicated to improving the educational
+                    landscape of our country. Our main objective is to empower students, parents and educational
+                    institutions to effectively navigate the educational system.</p>
             </div>
         </section>
         <section id="services">
+            <h4>Our Services</h4>
             <div class="container">
                 <div class="service">
                     <div class="icon">
@@ -89,11 +99,11 @@
                     <img src="src/images/medium-shot-people-graduating.png" alt="medium-shot-people-graduating">
                 </div>
                 <div class="form-container">
-                    <form action="">
-                        <input type="text" name="firstname" id="firstname">
-                        <input type="text" name="surname" id="surname">
-                        <input type="email" name="email" id="email">
-                        <input type="text" name="phone_number" id="phone_number">
+                    <form action="" id="feedback-form">
+                        <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                        <input type="text" name="surname" id="surname" placeholder="Last Name">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <input type="text" name="phone_number" id="phone_number" placeholder="Phone Number">
                         <select>
                             <option value="">Select interested programs</option>
                             <option value="">Under-grad</option>
@@ -113,17 +123,27 @@
     </main>
     <footer>
         <div class="container">
-            <div class="image-container" >
-                <img src="src/images/logo-white.png">
+            <div class="col">
+                <a href="" class="image-container">
+                    <img src="src/images/logo-white.png">
+                </a>
             </div>
-            <ul>
-                <li><h5>Contact Information</h5></li>
-                <li><a href=""><i class="ri-at-line"></i><span>info@skylimitdivineknowledge.com</span></a></li>
-                <li><a href=""><i class="ri-phone-line"></i><span>+233 (0) 54 970 8561</span></a></li>
-                <li><a href=""><i class="ri-phone-line"></i><span>+233 (0) 50 195 4123</span></a></li>
-                <li><a href=""><i class="ri-map-pin-line"></i><span>GA-464-9916 <br>Sekyi Street, Darkuman Nyamekye</span></a></li>
-            </ul>
+            <div class="col">
+                <ul>
+                    <li>
+                        <h5>Contact Information</h5>
+                    </li>
+                    <li><a href=""><i class="ri-at-line"></i><span>info@skylimitdivineknowledge.com</span></a></li>
+                    <li><a href=""><i class="ri-phone-line"></i><span>+233 (0) 54 970 8561</span></a></li>
+                    <li><a href=""><i class="ri-phone-line"></i><span>+233 (0) 50 195 4123</span></a></li>
+                    <li><a href=""><i class="ri-map-pin-line"></i><span>GA-464-9916 <br>Sekyi Street, Darkuman
+                                Nyamekye</span></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
+
+    <script src="src/js/menu.js"></script>
 </body>
+
 </html>

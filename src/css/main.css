@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: poppins, sans-serif;
+    user-select: none;
 }
 
 :root {
@@ -12,15 +13,17 @@
 body {
     background-color: white;
     font-size: 18px;
+    width: 100%;
 }
 
 .container {
+    width: 100%;
     max-width: 1100px;
     margin: auto;
 }
 
 header {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +35,10 @@ header .primary-navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: 100%;
+    padding: 0 15px;
+    
+    position: relative;
 }
 
 header .primary-navigation .logo {
@@ -53,20 +59,68 @@ header .primary-navigation .menu {
     justify-content: center;
     gap: 20px;
     list-style: none;
+    color: var(--blue);
 }
 
 .menu li a {
     text-decoration: none;
-    color: var(--blue);
+    color: inherit;
 }
 
+.menu-toggle {
+    display: none;
+    opacity: 0;
+}
+
+@media (max-width: 750px) { 
+    header {
+        height: 55px !important;
+        border: 1px solid;
+    }
+
+    header .primary-navigation .menu-toggle {
+        display: block;
+        opacity: 1;
+        color: var(--blue);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    header .primary-navigation .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--blue);
+        color: white;
+        width: 250px;
+        padding: 10px 20px;
+        margin: 0 !important;
+        border-radius: 5px;
+        gap: 10px !important;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    header .primary-navigation .menu.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    header .primary-navigation .menu li {
+
+    }
+}
 
 /* hero section */
 section#hero .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
-    padding: 15px 45px;
+    width: 100%;
+    /* padding: 15px 45px; */
 }
 
 section#hero .container .col {
@@ -75,6 +129,7 @@ section#hero .container .col {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    padding: 45px 0;
 }
 
 section#hero .container .col h1 {
@@ -106,9 +161,14 @@ section#hero .container .image-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* aspect-ratio: 1; */
+    padding: 30px 0;
+    overflow: hidden;
 }
 
 section#hero .container .image-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -140,3 +200,148 @@ section#about .container p {
 
 
 /* services section */
+section#services {
+    padding: 30px;
+}
+
+section#services h4 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+section#services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+section#services .container .service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+section#services .container .service:hover {
+    background: #70707030;
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 6px var(--grey);
+}
+
+
+/* feedback form */
+section#feedback {
+    overflow: hidden;
+}
+
+section#feedback .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+section#feedback .container .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+section#feedback .container .image-container img {
+    object-fit: cover;
+    object-position: center;
+}
+
+section#feedback .container form {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    height: 100%;
+    width: min(450px, 100%);
+    margin: auto;
+}
+
+section#feedback .container form input,
+section#feedback .container form select {
+    max-width: 450px;
+    height: 35px;
+    padding: 0 0 0 10px ;
+    outline: none;
+    /* border: none; */
+}
+
+section#feedback .container form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 35px;
+    border-radius: 50px;
+    margin: auto;
+    background: green;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* footer section */
+footer {
+    background: var(--blue);
+    color: white;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    padding: 30px 10px;
+}
+
+footer .container {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: flex-start;
+    /* width: 100%; */
+    gap: 15px;
+}
+
+footer .container > * {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+}
+
+footer .container .col ul {
+    list-style: none;
+}
+
+footer .container .col ul li h5 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+}
+
+footer .container .col ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+footer .container .col ul li a:hover span {
+    text-decoration: underline;
+}
