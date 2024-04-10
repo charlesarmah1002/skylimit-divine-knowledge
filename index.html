@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skylimit Divine Knowledge</title>
+    <title>Skylimit Divine Knowledge | Home</title>
     <link rel="shortcut icon" href="src/icons/favicon.png" type="image/x-icon">
 
-    <!-- css -->
-    <!-- <link rel="stylesheet" href="src/css/main.css"> -->
-    <link rel="stylesheet" href="src/css/main.new.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/fonts/remixicons/remixicon.css">
 </head>
 
@@ -26,7 +25,7 @@
                 <li><a href="">Home</a></li>
                 <li><a href="">Registration</a></li>
                 <li><a href="">Study Abroad</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="">About</a></li>
             </ul>
         </nav>
@@ -107,21 +106,24 @@
                             <input type="text" name="surname" id="surname" placeholder="Last Name">
                             <input type="email" name="email" id="email" placeholder="Email">
                             <input type="text" name="phone_number" id="phone_number" placeholder="Phone Number">
-                            <select>
+                            <select name="pref-prog" id="">
                                 <option value="">Select interested programs</option>
-                                <option value="">Under-grad</option>
-                                <option value="">Post-grad</option>
+                                <option value="">Under Graduate Programmes</option>
+                                <option value="">Post Graduate Programmes</option>
                             </select>
-                            <select name="" id="">
+                            <select name="pref-country1" id="countries1">
                                 <option value="">Preferred country</option>
                             </select>
-                            <select name="" id="">
+                            <select name="pref-country2" id="countries2">
                                 <option value="">Preferred country 2</option>
                             </select>
                             <button>Submit</button>
                         </form>
                     </div>
                 </div>
+            </section>
+            <section id="map">
+                <!-- thinking about having a map here -->
             </section>
         </div>
     </main>
@@ -148,6 +150,7 @@
     </footer>
 
     <script src="src/js/menu.js"></script>
+    <script src="src/js/countries.js"></script>
 </body>
 
 </html>
